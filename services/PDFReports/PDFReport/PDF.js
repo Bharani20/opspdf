@@ -20,7 +20,7 @@ module.exports = {
                 "/* $& */"
             );
             // Ensure the environment variable is set
-            process.env.LD_LIBRARY_PATH = "/app/lib";
+            process.env.LD_LIBRARY_PATH = "/opt/app-root/src/lib";
             // Set standalone executable path
             console.log("🚀 Launching browser...");
             console.log("📌 Current LD_LIBRARY_PATH:", process.env.LD_LIBRARY_PATH || "Not Set");
@@ -53,10 +53,10 @@ module.exports = {
                 env: {
                     HOME: "/tmp", // Sets a writable home directory
                     ...process.env,  // Inherit existing env variables
-                    LD_LIBRARY_PATH: "/app/lib",
-                    FC_CONFIG_FILE: "/app/extracted/etc/fonts/fonts.conf",
-                    FC_CONFIG_DIR: "/app/extracted/etc/fonts",
-                    FC_FONT_PATH: "/app/extracted/usr/share/fonts"
+                    LD_LIBRARY_PATH: "/opt/app-root/src/lib",
+                    FC_CONFIG_FILE: "/opt/app-root/src/extracted/etc/fonts/fonts.conf",
+                    FC_CONFIG_DIR: "/opt/app-root/src/extracted/etc/fonts",
+                    FC_FONT_PATH: "/opt/app-root/src/extracted/usr/share/fonts"
                 }
             });
 
